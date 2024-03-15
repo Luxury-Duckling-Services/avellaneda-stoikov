@@ -10,6 +10,12 @@
 
 # https://arxiv.org/pdf/1105.3115.pdf
 
+# https://github.com/hummingbot/hummingbot/tree/master/hummingbot/strategy/avellaneda_market_making
+
+# https://hummingbot.org/strategies/avellaneda-market-making/
+
+# https://stanford.edu/class/msande448/2018/Final/Reports/gr5.pdf
+
 import math
 
 class AvellanedaStoikov:
@@ -25,11 +31,11 @@ class AvellanedaStoikov:
     def reservation_price(self):
         return self.s - self.q * self.gamma * self.sigma * self.sigma * (T - self.t)
     
-    def bid_ask_spread(self):
+    def optimal_bid_ask_spread(self):
         return self.gamma * self.sigma * self.sigma * (T - t) + (2/self.gamma) * self.log(1 + self.gamma / self.k)
     
-    def bid(self):
+    def optimal_bid(self):
         return self.reservation_price() - self.bid_ask_spread() / 2
        
-    def ask(self):
+    def optimal_ask(self):
         return self.reservation_price() + self.bid_ask_spread() / 2
