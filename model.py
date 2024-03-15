@@ -1,7 +1,5 @@
 # https://github.com/keanekwa/Optiver-Ready-Trader-Go/blob/main/ASModel.py
 
-
-
 # https://medium.com/@degensugarboo/avellaneda-and-stoikov-mm-paper-implementation-b7011b5a7532
 
 # https://math.nyu.edu/~avellane/HighFrequencyTrading.pdf
@@ -13,8 +11,6 @@
 # https://github.com/hummingbot/hummingbot/tree/master/hummingbot/strategy/avellaneda_market_making
 
 # https://hummingbot.org/strategies/avellaneda-market-making/
-
-
 
 import math
 
