@@ -91,6 +91,10 @@ def trading_intensity(orderbook_df , time):
             new_bid_order_prices.append( sampling_df.loc[index]['bidp0'] )
         
     delta = np.array( bid_order_price_trading_intensity + ask_order_price_trading_intensity) 
+
+    if len(delta) == 0:
+        return 0
+    
     delta_S = delta[:, 0].reshape(-1, 1)
     delta_t = np.log( delta[:, 1] )
         
